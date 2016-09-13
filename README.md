@@ -26,7 +26,7 @@ Install and start the CDH QuickStart VM. 100% of my interaction with the VM is a
 
 If you prefer or require Java 8, you will need to install it on the VM. Setting JAVA_HOME in bigtop-utils does not set the property for user's profile; it sets it only for Hadoop applications. (For what it's worth, I have not been able to determine where JAVA_HOME gets set for users. I've tried `~/.bashrc`, `~/.bash_profile`, and `/etc/profile` with no luck.) 
 
-1. [Install the Java 8 JDK](http://www.cloudera.com/documentation/enterprise/5-5-x/topics/cdh_ig_jdk_installation.html) to /usr/java.
+1. [Install the Java 8 JDK](http://www.cloudera.com/documentation/enterprise/5-5-x/topics/cdh_ig_jdk_installation.html) to `/usr/java`.
 2. Change the owner to root: `sudo chown -R root /usr/java/jdk1.8.0_[build]/`
 3. Set JAVA_HOME in `/etc/default/bigtop-utils`.
 
