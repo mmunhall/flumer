@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{ISO8601} - %-5level - %logger{36} - %msg%n"/>
+        </Console>
+        <File name="file" fileName="logs/app.log">
+            <PatternLayout pattern="%d{ISO8601} - %-5level - %logger{36} - %msg%n"/>
+        </File>
+        <Flume name="flume" compress="false" type="Embedded" ignoreExceptions="false">
+            <Property name="channel.type">memory</Property>
+            <Property name="sinks">avrosink</Property>
+            <Property name="avrosink.channel">memory</Property>
+            <Property name="avrosink.type">avro</Property>
+            <Property name="avrosink.hostname">quickstart.cloudera</Property>
+            <Property name="avrosink.port">5555</Property>
+            <Property name="avrosink.batch-size">10</Property>
+            <Property name="avrosink.serializer">avro_event</Property>
+            <Property name="processor.type">failover</Property>
+            <PatternLayout pattern="%d{ISO8601} - %-5level - %logger{36} - %msg"/>
+        </Flume>
+    </Appenders>
+    <Loggers>
+        <Root level="trace">
+            <AppenderRef ref="flume" />
+            <AppenderRef ref="console"/>
+            <AppenderRef ref="file"/>
+        </Root>
+    </Loggers>
+</Configuration>
