@@ -8,7 +8,12 @@ Disclaimer: I am not a Hadoop expert. Much of what I've implemented here can be 
 Design Goals
 ------------
 
-TODO
+1. Reduce or eliminate completely the tremendous amount of log data stored on a filesystem,
+2. Continue to allow logs to be written to the filesystem,
+3. Store all log data in Hadoop for analysis,
+4. Allow for old data to be purged,
+5. Provide an interface to monitor log data in near real time,
+6. Allow for the data to be analyzed programmatically (e.g. map/reduce, Spark, [insert buzzword])
 
 Setup
 -----
