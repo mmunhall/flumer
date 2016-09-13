@@ -312,5 +312,6 @@ TODO
 * Parititioning
     * Re-partition ymd to y, m, d
     * Add partitions for app, instance
+* Automate the creation of Impala partitions. Is this a job for Oozie?
 * Investigate Parquet
 * Investigate Kudu
