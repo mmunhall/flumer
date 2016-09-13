@@ -32,7 +32,7 @@ If you prefer or require Java 8, you will need to install it on the VM. Setting 
 
 #### Networking ####
 
-Create host mapping on host to VM (i.e., update `/etc/hosts/` with an entry for quickstart.cloudera that points to the IP address of the VM).
+Create host mapping on host to VM (i.e., update `/etc/hosts/` with an entry for _quickstart.cloudera_ that points to the IP address of the VM.
 
 ### HDFS ###
 
